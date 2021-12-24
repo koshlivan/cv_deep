@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/*@import 'tailwindcss/base';*/
+/*@import 'tailwindcss/components';*/
+/*@import 'tailwindcss/utilities';*/
 
 
 html {
@@ -236,6 +236,14 @@ body {
     margin-left: 2rem;
 }
 
+#forget_form input[type="password"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
 #log_form label, #reg_form label {
     margin: 0 auto;
     display: inline-block;
@@ -315,4 +323,18 @@ body {
 
 .remain-info>p{
     text-align: justify;
+}
+
+.text-link {
+    color: #245e67;
+    font-size: large;
+    font-weight: bold;
+    padding-right: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+}
+.text-link:hover{
+    color: lightgray;
+    text-shadow: 0 0 4px black;
+
 }
