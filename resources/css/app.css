@@ -1,0 +1,318 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+body {
+    background-color: #e6e6e6;
+}
+.contain{
+    width: 70%;
+    margin: auto;
+    background-color: #ffffff;
+    min-height: 920px;
+}
+
+.menu {
+    display: flex;
+    background-color: #899dbd;
+    height: 4rem;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu > a {
+    margin: 0 auto;
+    width: 32.5%;
+    height: 4rem;
+    font-size: larger;
+    background-color: #a1b9de;
+    text-decoration: none;
+    color: #3c4553;
+    text-align: center;
+    line-height: 3rem;
+}
+
+
+.wraper{
+    display: flex;
+    box-shadow: 3px 3px 4px #bfbfbf;
+    min-height: 80vh;
+    position: relative;
+}
+
+.side-info {
+    background-color: #d8c2a6;
+    display: flex;
+    min-width: 30%;
+    margin: 0 1rem;
+    flex-direction: column;
+    align-content: center;
+}
+
+.pr-photo {
+    width: 90%;
+    min-height: 9rem;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+.lblCont {
+    background-color: #323026;
+    width: 90%;
+    margin: 3px auto;;
+    color: white;
+    padding-left: 1rem;
+    padding-bottom: 3px;
+}
+
+.for-photo {
+    background-color: #c4c4c4;
+    width: 80%;
+    min-height: 9rem;
+    border-radius: 50%;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ld_photo {
+    width: 80%;
+    border: solid 2px black;
+    background-color: inherit;
+    margin: 0 auto;
+}
+
+.p-info:nth-child(1n) {
+    min-width: 100%;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem ;
+}
+.p-info:nth-child(2n) {
+    min-width: 100%;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem ;
+}
+
+.side-info .ul-info {
+    margin: 15px auto 4rem 1rem;
+
+}
+
+.mmain-info {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    align-content: stretch;
+    min-width: 65%;
+    margin-left: 0;
+}
+
+.heading {
+    min-width: 95%;
+    max-width: 98%;
+    margin: 0 auto;
+    height: 15rem;
+    background-color: #323026;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+}
+.head>h1, h2{
+    margin: 0 auto;
+}
+
+.remain-info {
+    margin: 0 1rem;
+}
+
+
+.inp-edit {
+    width: 90%;
+    margin: 2px auto;
+    padding: 0 3px;
+    background-color: #faf7f3;
+}
+
+.inp-edit-name {
+    width: 40%;
+    height: 4rem;
+    margin: 0 auto;
+    background-color: #c4c4c4;
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+}
+.inp-edit-name::placeholder {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.inp-edit-main {
+    width: 100%;
+    border: solid 1px black;
+}
+
+.reg-wind {
+    width: 50%;
+    min-height: 60vh;
+    margin: 3rem auto;
+    background-color: #d8c2a6;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#log_form{
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#reg_form {
+    width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#log_form input[type="text"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+#log_form input[type="password"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+#reg_form input[type="text"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+#reg_form input[type="password"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+#reg_form input[type="email"] {
+    display: inline-block;
+    border: solid 2px #899dbd;
+    max-width: 60%;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+#log_form label, #reg_form label {
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#btnSubm {
+    width: 11rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    background-color: #a1b9de;
+    border: solid 2px #899dbd;
+    text-align: center;
+    line-height: 3rem;
+    float: right;
+    right: 3rem;
+    bottom: 3rem;
+}
+
+.ifWrong {
+    color: red;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.row {
+    margin: 1rem;
+}
+.field-set {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-content: center;
+}
+.field {
+    min-height: 96px;
+
+}
+
+.error{
+    min-width: 15rem;
+    min-height: 5rem;
+    background-color: #da8787;
+    text-align: center;
+    line-height: 5rem;
+    color: red;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 3px white;
+    box-shadow: 3px 3px 4px red;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 1rem;
+}
+.message{
+    min-width: 15rem;
+    min-height: 5rem;
+    background-color: #79c490;
+    text-align: center;
+    line-height: 5rem;
+    color: green;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 3px white;
+    box-shadow: 3px 3px 4px green;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 1rem;
+}
+
+.remain-info>p{
+    text-align: justify;
+}
