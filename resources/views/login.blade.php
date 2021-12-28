@@ -19,14 +19,14 @@
                     <input type="password" name="password" class="col-7" required>
                 </div>
 
-                <div>
-                    <div class="row align-items-center field">
-                        <label for="remember_me" class="p-info">
-                            <input id="remember_me" type="checkbox" name="remember">
-                            <span class="p-info">{{ __('Remember me') }}</span>
-                        </label>
-                    </div>
-                </div>
+{{--                <div>--}}
+{{--                    <div class="row align-items-center field">--}}
+{{--                        <label for="remember_me" class="p-info">--}}
+{{--                            <input id="remember_me" type="checkbox" name="remember">--}}
+{{--                            <span class="p-info">{{ __('Remember me') }}</span>--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
                 <div>
                     <div class="row align-items-center field">
@@ -44,9 +44,9 @@
 {{--                </div>--}}
             </form>
         </div>
-        @if($message??null)
+        @if($errors->any())
             <div class="error">
-                {{$message??''}}
+                {{__('Login or password is incorrect')}}
             </div>
         @endif
         @if($mess_ok??null)

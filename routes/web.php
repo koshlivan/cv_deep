@@ -12,11 +12,11 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [App\Http\Controllers\Filler::class, 'getValues'])->name('main');
+Route::get('/', [App\Http\Controllers\PageFillController::class, 'show'])->name('main');
 
-Route::get('/edit', [App\Http\Controllers\Filler::class, 'getValues'])->name('edit');
+Route::get('/edit', [App\Http\Controllers\PageFillController::class, 'keep'])->name('edit');
 
-Route::post('/edit', [App\Http\Controllers\Editor::class, 'edition'])->name('editor');
+Route::post('/edit', [App\Http\Controllers\EditController::class, 'update'])->name('update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,11 +1,12 @@
 <nav class="menu">
     <a href="/">Main Page</a>
-    @if(Auth::id()!='')
+    @auth
         <a  href="/edit">Edit</a>
         <a href="/logout">Logout</a>
-    @else
+    @endauth
+    @guest
         <a href="/login">Login</a>
         <a href="/register">Register</a>
-    @endif
+    @endguest
 
 </nav>

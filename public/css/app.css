@@ -122,8 +122,8 @@ body {
     margin: 0 1rem;
 }
 .inp-edit {
-    width: 90%;
-    margin: 2px auto;
+    width: 100%;
+    margin: 3px auto;
     padding: 0 3px;
     background-color: #faf7f3;
 }
@@ -307,10 +307,35 @@ body {
     padding-right: 3rem;
     margin-right: 3rem;
     text-align: center;
+    text-shadow: 0 3px 4px #99f3e9;
+    transition: 300ms;
 }
 .text-link:hover{
     color: lightgray;
     text-shadow: 0 0 4px black;
 
 }
+.soc {
+    color: #245e67;
+    margin: 0 auto 1rem auto;
+    min-width: 90%;
+    padding-left: 1rem;
+    text-align: left;
+    text-shadow: 0 3px 4px #99f3e9;
+    transition: 300ms;
+}
+.soc:hover {
+    color: lightgray;
+    text-shadow: 0 0 4px black;
+}
+.skills, .education, .contact{
+    width: 90%;
+    margin: 2px auto;
+    padding: 0 3px;
+}
+#addSkill, #addStudy, #addSoc {
+    max-width:50%;
+    margin: 0.5rem auto;
+}
+
 

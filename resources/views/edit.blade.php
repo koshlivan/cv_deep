@@ -10,33 +10,50 @@
                     <input type="file" id="ld_photo" placeholder="File input here" name="inpPhoto" >
                 </div>
                 <h3 class="lblCont">Contact</h3>
-                <input type="text" class="inp-edit" placeholder="Phone" name="inpPhone" value="{{$user->phone??''}}">
-                <input type="email" class="inp-edit" placeholder="E-Mail" name="inpMail" value="{{$user->email??''}}">
-                <input type="text" class="inp-edit" placeholder="Address" name="inpAddr" value="{{$user->address??''}}">
-                <input type="text" class="inp-edit" placeholder="LinkedIn" name="inpLd" value="{{$user->linked??''}}">
+                <div class="contact">
+                <input type="text" class="inp-edit" placeholder="Phone" name="inpPhone" value="{{$info->phone??''}}">
+                <input type="email" class="inp-edit" placeholder="E-Mail" name="inpMail" value="{{$info->email??''}}">
+                <input type="text" class="inp-edit" placeholder="Address" name="inpAddr" value="{{$info->address??''}}">
+
+                    @foreach($socials as $social)
+                <input id='linked' type="text" class="inp-edit" placeholder="LinkedIn" name="inpLd[]" value="{{$social??''}}">
+                    @endforeach
+                </div>
+                <button id="addSoc" type="button">Add social network</button>
                 <h3 class="lblCont">Education</h3>
+                <div class="education">
+                    @for($i=0; $i<count($degries); $i++)
                 <input  class="inp-edit"
                         placeholder="Degree name"
-                        name="inpDegree"
-                        value="{{$user->degree??''}}"
+                        name="inpDegree[]"
+                        value="{{$degries[$i]}}"
                 >
                 <input  class="inp-edit"
                         placeholder="University name"
-                        name="inpUniversity"
-                        value="{{$user->university??''}}"
+                        name="inpUniversity[]"
+                        value="{{$universities[$i]}}"
                 >
                 <input  class="inp-edit"
                         placeholder="Period"
-                        name="inpPeriod"
-                        value="{{$user->period??''}}"
+                        name="inpPeriod[]"
+                        value="{{$periods[$i]}}"
                 >
+                    @endfor
+                </div>
+                <button id="addStudy" type="button">Add education</button>
                 <h3 class="lblCont">Skills</h3>
+                <div class="skills">
+                    @foreach($skills as $skill)
                 <input type="text"
+                       id="skillInput"
                        class="inp-edit"
                        placeholder="php, html, css, javascript"
-                       name="inpSkill"
-                       value="{{$user->skill??''}}"
+                       name="inpSkill[]"
+                       value="{{$skill}}"
                 >
+                    @endforeach
+                </div>
+                <button id="addSkill" type="button">Add skill</button>
             </div>
 
             <div class="mmain-info">
@@ -45,7 +62,7 @@
                            class="inp-edit-name"
                            placeholder="Your name"
                            name="inpName"
-                           value="{{$user->name??''}}"
+                           value="{{$info->name??''}}"
                     >
                     <h2>web developer</h2>
                 </div>
@@ -55,14 +72,14 @@
                                placeholder="Personal information"
                                cols="20"
                                name="inpProfile"
-                    >{{$user->profile??''}}</textarea>
+                    >{{$info->profile??''}}</textarea>
 
                     <h3>Professional experiance</h3>
                     <textarea  class="inp-edit-main"
                                placeholder="Professional experience"
                                cols="20"
                                name="inpExper"
-                    >{{$user->experience??''}}</textarea>
+                    >{{$info->experience??''}}</textarea>
                     <input type="submit" value="Save">
                 </div>
             </div>

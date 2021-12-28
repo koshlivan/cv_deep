@@ -1,9 +1,9 @@
 @extends('app')
 
 @section('content')
-    @if($message??null)
+    @if($errors->any())
         <div class="alert alert-danger alert-dismissible fade show">
-            {{$message}}
+            {{implode('', $errors->all(':message'))}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
@@ -28,6 +28,10 @@
                     <div class="row align-items-center field">
                         <label for="password_confirmation" class="col-3">Repeat pass</label>
                         <input type="password" name="password_confirmation" class="col-7" required>
+                    </div>
+                    <div class="row align-items-center field">
+                        <label for="isAdmin" class="col-3">Admin permissions</label>
+                        <input type="checkbox" name="isAdmin" class="col-7">
                     </div>
                 </div>
                 <div>

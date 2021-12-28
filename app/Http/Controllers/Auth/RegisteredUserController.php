@@ -34,19 +34,21 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->login);
-//        die();
+
         $request->validate([
             'login' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', 'min:3'],
         ]);
+        $admin= isset($request->isAdmin);
 
         $user = User::create([
             'login' => $request->login,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'is_admin' => $admin,
         ]);
+
 
         event(new Registered($user));
 
@@ -54,4 +56,5 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
 }
