@@ -18,7 +18,7 @@ class CreateSchoolsTable extends Migration
             $table->string('university')->nullable();
             $table->string('degree')->nullable();
             $table->string('period')->nullable();
-            $table->unsignedBigInteger('information_id')->nullable();
+            $table->unsignedBigInteger('information_id')->default(1)->nullable();
             $table->foreign('information_id')->references('id')->on('informations');
             $table->timestamps();
         });

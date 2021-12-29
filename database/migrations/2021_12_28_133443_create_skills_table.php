@@ -16,7 +16,7 @@ class CreateSkillsTable extends Migration
         Schema::create('skills', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('skill')->nullable();
-            $table->unsignedBigInteger('information_id')->nullable();
+            $table->unsignedBigInteger('information_id')->default(1)->nullable();
             $table->timestamps();
             $table->foreign('information_id')->references('id')->on('informations');
         });

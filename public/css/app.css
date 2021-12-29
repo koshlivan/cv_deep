@@ -299,6 +299,8 @@ body {
 }
 .remain-info>p{
     text-align: justify;
+    text-indent: 2rem;
+
 }
 .text-link {
     color: #245e67;
